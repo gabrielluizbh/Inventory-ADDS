@@ -1,4 +1,4 @@
-# Script de levantamento de informações de Active Directory
+# Script de levantamento de informações do Active Directory
 
 ## **Conteúdo:**
 

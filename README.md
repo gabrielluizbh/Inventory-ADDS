@@ -6,6 +6,6 @@ Script Levantamento Active Directory.ps1
 
 ## **Mais informações:**
 
-**Para maior entendimento para execução do script acesse o link do artigo: https://cooperati.com.br/2023/03/windows_server_backup_powershell/**
+**Para maior entendimento para execução do script acesse o link do artigo: https://gabrielluiz.com/2023/03/inventory-adds/**
 
 **Créditos - Gabriel Luiz - www.gabrielluiz.com**

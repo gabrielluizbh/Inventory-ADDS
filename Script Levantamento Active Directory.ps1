@@ -1,21 +1,23 @@
 ﻿## Script de levantamento de informações do Active Directory - Créditos Gabriel Luiz - www.gabrielluiz.com #
 
+<# 
 
+Script informa quais são os controladores de domínio (Domain Controllers),
+Site, Subnets, Relação de confiança, GPO, usuários e computadores que loga e não loga 90 dias,
+todos os usuários e computadores, mestre de operações (FSMO) e informações da floresta e domínio.
 
-# Script informa quais são os controladores de domínio (Domain Controllers), Site, Subnets, Relação de confiança, GPO, usuários e computadores que loga e não loga 90 dias, todos os usuários e computadores, mestre de operações (FSMO) e informações da floresta e domínio.
-
+#>
 
 ##################################################################  Ferramenta RSAT  ######################################################################
 
 # Necessáiro para excução do script.
+
 
 <#
 
 Windows Cliente
 
 Se estiver utilziando o Windows 10 - Versão 1809 ou posterior, Windows 11. Dúvidas sobre como instalar as Ferramentas de RSAT em versões mais nova do Windows Cliente leia este artigo: https://gabrielluiz.com/2020/04/rsat-windows-10-versao-1809/
-
-#>
 
 
 Add-WindowsCapability –online –Name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0 # Instala da Ferramentas de Administração de Servidor Remoto: Active Directory Domain Services e Lightweight Directory Services Tools
@@ -25,13 +27,9 @@ Add-WindowsCapability –online –Name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0
 Get-WindowsCapability -Name RSAT* -Online | Select-Object -Property DisplayName, State # Verificar a instalação.
 
 
-<#
-
 Windows Server
 
 Recomendo o uso do Windows Server 2012 ou posterior.
-
-#>
 
 
 Install-WindowsFeature RSAT-ADDS # Instala da Ferramentas de Administração de Servidor Remoto: Active Directory Domain Services e Lightweight Directory Services Tool.
@@ -41,7 +39,7 @@ Install-WindowsFeature GPMC # Instala a Ferramentas de Gerenciamento de Polític
 Get-WindowsFeature| ft Name,Installstate # Verificar a instalação.
 
 
-
+#>
 
 
 ##################################################################  CRIAÇÃO DAS PASTAS  ######################################################################
